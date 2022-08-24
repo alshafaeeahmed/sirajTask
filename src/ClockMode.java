@@ -1,5 +1,7 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ClockMode implements WatchMode {
 
@@ -33,9 +35,14 @@ public class ClockMode implements WatchMode {
 
     @Override
     public void buttonC() {
-        System.out.println("An alarm will be activated after 2 minutes");
-        Alarm alarm = new Alarm();
-        alarm.beepForAnHour();
+        System.out.println("An alarm activated for 2 minutes");
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            public void run() {
+                System.out.println("ALARM");
+            }
+        };
+        timer.scheduleAtFixedRate(task, 120000, 1000);
 
     }
 

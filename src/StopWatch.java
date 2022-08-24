@@ -31,9 +31,13 @@ public class StopWatch {
             secondsPassed = 0;
         }
         isRunning = false;
-        timer.cancel();
-        timer.purge();
-        task.cancel();
+        if (timer != null ){
+            timer.cancel();
+            timer.purge();
+        }
+        if (task != null ) {
+            task.cancel();
+        }
         printTime();
     }
 
