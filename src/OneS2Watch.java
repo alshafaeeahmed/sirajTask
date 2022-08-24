@@ -13,11 +13,13 @@ public class OneS2Watch {
             char a = input.next().charAt(0);
             if (a == 'A') {
                 OneS2Watch.watchMode = OneS2Watch.watchMode.buttonA();
-            } else if (a == 'B')
+            } else if (a == 'B') {
                 OneS2Watch.watchMode.buttonB();
-
-            else if (a == 'C')
+            } else if (a == 'C') {
                 OneS2Watch.watchMode.buttonC();
+            } else if (a == '0') {
+                return;
+            }
         }
 
     }

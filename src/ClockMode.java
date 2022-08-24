@@ -42,7 +42,7 @@ public class ClockMode implements WatchMode {
                 System.out.println("ALARM");
             }
         };
-        timer.scheduleAtFixedRate(task, 120000, 1000);
+        timer.scheduleAtFixedRate(task, 120000, 120000);
 
     }
 
