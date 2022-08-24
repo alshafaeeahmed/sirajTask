@@ -7,7 +7,7 @@ class Alarm {
 private final ScheduledExecutorService scheduler = 
    Executors.newScheduledThreadPool(1);
 
-public void beepForAnMin() {
+public void beepForAnHour() {
     final Runnable beeper = new Runnable() {
             public void run() { System.out.println("beep"); }
         };
